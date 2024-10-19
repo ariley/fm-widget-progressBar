@@ -16,11 +16,13 @@ console.log("ProgressBar.js loaded:", typeof ProgressBar !== 'undefined');
 				// Text color
 				color: '#999',
 				position: 'absolute',
-				right: '0',
-				top: '30px',
+				left: '50%',  // Center horizontally
+				top: '75',
 				padding: 0,
 				margin: 0,
-				transform: null
+				transform: 'translateX(-50%)',  // Center the text horizontally
+				textAlign: 'center',  // Ensure the text remains centered
+				width: '100%'  // Make sure the text container takes full width
 			},
 			autoStyleContainer: false
 		},
@@ -39,6 +41,7 @@ console.log("ProgressBar.js loaded:", typeof ProgressBar !== 'undefined');
 		bar.animate(progressValue / 100);  // Update progress bar
 	};
 	 // Function to update the progress note
-	 window.fmupdateProgressNote = function (note) {
+
+	 window.fmUpdateProgressNote = function (note) {
 		document.getElementById('progressNote').innerText = note;  // Update the progress note text
 	};
